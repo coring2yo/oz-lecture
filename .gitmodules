@@ -1,0 +1,3 @@
+[submodule "day09/profile-generator/day07/Portfolio"]
+	path = day09/profile-generator/day07/Portfolio
+	url = https://github.com/coring2yo/oz-lecture.git
