@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>My ToDoDoDo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #a0f3cb;
+        }
+        .delete-button {
+            background-color: #6b68f9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            background-color: #0ce6ee;
+        }
+        input, button, select {
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My ToDoDoDo List</h1>
+        <div>
+            <input type="text" id="taskInput" placeholder="할 일을 입력하세요">
+            <input type="date" id="taskDate" />
+            <!-- <select id="prioritySelect">
+                <option value="low">낮음</option>
+                <option value="high">높음</option>
+            </select> -->
+            <button id="addButton"> + </button>
+            <button id="clearButton">전체 삭제</button>
+        </div>
+        <div id="taskCount">해야 할 일: 0개</div>
+        <ul id="taskList"></ul>
+        <!-- //<li>사용자가 input에 입력한 값<span>삭제</span></li> -->
+        <!-- <li class="completed">사용자가 input에 입력한 값 <span>삭제</span></li> -->
+         <!-- <li class="completed"><span>사용자가 input에 입력한 값</span><button>삭제</button> -->
+         <!-- <li> -->
+        <!-- <li class="task-item"><span>사용자가 input에 입력한 값</span><button>삭제</button>  -->
+            <!-- </li> -->
+    </div>
+    <script src="dom-assignment.js"></script>
+</body>
+</html>
+

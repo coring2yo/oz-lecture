@@ -1,0 +1,127 @@
+/* 전체 배경 */
+body {
+    background-color: skyblue;
+    font-family: 'Arial', sans-serif;
+    margin: center;
+    padding: center;
+
+
+display: flex;
+  justify-content: center; /* 수평 가운데 */
+  align-items: center;     /* 수직 가운데 */
+  height: 100vh;           /* 화면 전체 높이 기준 */
+}
+
+ /* 컨테이너 정렬 */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 컨테이너 스타일 */
+/* .container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 내부 요소도 가운데 정렬 */
+ */
+
+/* 입력 영역 */
+input, select, button {
+    padding: 30px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #8ef5cc;
+    font-size: 16px;
+}
+
+/* 할 일 항목 */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+/* 마우스 오버 효과 */
+.task-item:hover {
+    transform: scale(1.01);
+    background-color: #e0f7fa;
+}
+
+/* 완료된 할 일 */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* 삭제 버튼 (비행기 이모지 버튼) */
+.delete-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.delete-button:hover {
+    transform: rotate(-15deg) scale(1.2);
+}
+
+/* 우선순위 강조 예시 (선택사항) */
+.high {
+    color: red;
+    font-weight: bold;
+}
+
+/* 날짜 스타일 */
+.task-item small {
+  font-size: 0.8em;
+  margin-left: 10px;
+  color: #666;
+}
+
+/* 공통 버튼 스타일 */
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* 추가 버튼 - 연한 초록색 */
+#addButton {
+  background-color: #2e87d5; /* 초록 */
+  color: white;
+}
+#addButton:hover {
+  background-color: #3d97c4; /* 어두운 초록 */
+}
+
+/* 전체 삭제 버튼 - 연한 주황색 */
+#clearButton {
+  background-color: #189fff; /* 주황 */
+  color: white;
+}
+#clearButton:hover {
+  background-color: #007bef; /* 어두운 주황 */
+}
