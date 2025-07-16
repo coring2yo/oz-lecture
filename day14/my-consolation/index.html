@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>고민,고민하지마</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    background-color: #71b391;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 360px;
+    padding: 20px 30px;
+    background: rgb(201, 239, 180);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  #output {
+    border: 1px solid #48c26d;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 80px;
+    background-color: #23d36f;
+    white-space: pre-line;
+    margin-top: 10px;
+  }
+  .error {
+    color: red;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  input, button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  input {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>고민 상담소</h1>
+    <input type="text" id="postIds" placeholder="고민을 입력해주세요" />
+    <button id="fetchPosts">위로 받기</button>
+    <div id="output"></div>
+  </div>
+
+<script>
+  const comfortMessages = [
+    "힘들겠지만, 분명히 잘 될 거예요.",
+    "지금은 힘들어도 곧 좋은 날이 올 거예요.",
+    "당신은 혼자가 아니에요. 응원합니다!",
+    "모든 어려움은 지나가고 성장으로 바뀔 거예요.",
+    "작은 한 걸음도 큰 변화를 만듭니다. 힘내세요!",
+  ];
+
+  const runChallenge = function () {
+    const input = document.getElementById("postIds").value.trim();
+    const output = document.getElementById("output");
+    const button = document.getElementById("fetchPosts");
+
+    output.innerHTML = "";
+    output.classList.remove("error");
+
+    if (input === "") {
+      output.classList.add("error");
+      output.textContent = "고민을 입력해주세요!";
+      return;
+    }
+
+    button.disabled = true;
+
+    const randomIndex = Math.floor(Math.random() * comfortMessages.length);
+    const message = comfortMessages[randomIndex];
+
+    output.textContent = `고민: ${input}\n위로: ${message}`;
+
+    setTimeout(() => {
+      button.disabled = false;
+    }, 1000);
+  };
+
+  window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("fetchPosts").addEventListener("click", runChallenge);
+  });
+</script>
+</body>
+</html>

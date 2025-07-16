@@ -1,0 +1,70 @@
+/* 전체 화면 중앙 정렬 */
+body {
+  height: 100vh;             /* 화면 전체 높이 */
+  margin: 0;                 /* 기본 마진 제거 */
+  display: flex;             /* Flexbox 사용 */
+  justify-content: center;   /* 가로 중앙 정렬 */
+  align-items: center;       /* 세로 중앙 정렬 */
+  background-color: #ec9de8; /* 배경색 (선택 사항) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 화면 전체를 flex 컨테이너로 만들고 중앙 정렬 */
+body, html {
+  height: 100%;    /* 반드시 html과 body 모두 높이 100% */
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* 가로 중앙 */
+  align-items: center;      /* 세로 중앙 */
+  background-color: #c65cd6;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  width: 360px; /* 컨테이너 고정 너비 */
+  padding: 20px 30px;
+  background: rgb(179, 22, 150);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  box-sizing: border-box; /* 박스 모델 */
+}
+
+/* 입력, 버튼, 출력 모두 가로 100%, box-sizing 포함 */
+.container input,
+.container button,
+#output {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 추가 스타일 */
+.container input {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.container button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#output {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 80px;
+  background-color: #fafafa;
+  white-space: pre-line;
+  margin-top: 10px;
+}
+
+
+/* 에러 메시지 스타일 */
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 1.1em;
+}
