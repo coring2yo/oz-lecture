@@ -1,0 +1,28 @@
+#output {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 100px;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease;
+}
+
+.post {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: default;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.post:hover {
+  background-color: #e9f5ff;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 1.1em;
+}
