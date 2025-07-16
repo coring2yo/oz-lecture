@@ -1,0 +1,33 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin-top: 100px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#timerDisplay {
+  font-size: 24px;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#startTimer:disabled {
+  opacity: 0.6;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
