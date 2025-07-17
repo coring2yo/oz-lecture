@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>도서 관리 앱</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="book-container">
+    <h1>도서 관리 앱</h1>
+    <input type="text" id="title" placeholder="도서 제목" />
+    <input type="number" id="price" placeholder="가격" />
+    <button onclick="addBook()">도서 추가</button>
+    <ul id="book-list"></ul>
+    <!-- 📌 여기에 처리 버튼 추가 -->
+    <button onclick="processBooks()">도서 처리</button>
+    <div id="results"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
